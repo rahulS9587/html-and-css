@@ -1,0 +1,59 @@
+<head>
+    <script src="q-3.js"></script>
+    <script>
+        function enqueue(element) {
+            let value = document.getElementById("data").value;
+            Queue.enqueue(value);
+            document.getElementById("d1").innerText =  Queue.items.join("->");
+            console.log(Queue);
+
+        }
+        function dequeue() {
+            if(Queue.isempty()){
+                document.getElementById("d1").innerText ="stack is empty";
+        }else{
+            Queue.dequeue();
+            document.getElementById("d1").innerText =Queue.items.join("->");
+            console.log(Queue);
+    }
+}
+    function getlastitem(){
+        if(Queue.isempty()){
+            alert("Queue is empty")
+        }else{
+            //stack.peek();
+        alert("last item:" +Queue.peek());
+        }
+    }
+    function printTable()
+{
+    if (Queue.items == 0) {
+        return document.getElementById("d1").innerText="Stack is empty";
+    } else{
+    var ndata= Queue.items;//.getElementById("data").innerText=Stack.items;
+    var spaceofDiv=document.getElementById("d1");
+    var tableStr = "";
+    tableStr =("<table border=1>");
+    
+        for(i=0; i<ndata.length; i++)
+        {    
+            tableStr +="<tr><td width=50 height=50>"+ndata[i]+"</td></tr>&nbsp;";
+        }
+    tableStr  += "</table>"
+    spaceofDiv.innerHTML=tableStr;  
+    } 
+    
+}
+    </script>
+</head>
+<body>
+    <h2>stack  demo using javascript</h2>
+    Enter Data : <input type="text" id="data">
+    <button onclick="enqueue()">add</button>
+    <button onclick="dequeue()">remove</button>
+    <button onclick="getlastitem()">peek</button>
+    <button onclick="printTable()">printtable</button>
+    <div id="d1"></div>
+</body>
+
+</html>

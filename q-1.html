@@ -1,0 +1,35 @@
+<html>
+<head>
+    <script src="q-1.js"></script>
+    <script>
+        function add() {
+            let value = document.getElementById("data").value;
+            LinkedList.add(value);
+            document.getElementById("d1").innerText = str;
+
+        }
+        function remove() {
+            let value = document.getElementById("data").value;
+            LinkedList.remove(value);
+            let str = LinkedList.print();
+            document.getElementById("d1").innerText = str;
+        }
+        function print(){
+            let value=document.getElementById("data").value;
+            let str= LinkedList.print();
+            document.getElementById("d1").innerText=str;
+        }
+    </script>
+
+</head>
+
+<body>
+    <h2>linked list demo using javascript</h2>
+    Enter Data : <input type="text" id="data">
+    <button onclick="add()">add</button>
+    <button onclick="remove()">remove</button>
+    <button onclick="print()">print</button>
+    <div id="d1"></div>
+</body>
+
+</html>

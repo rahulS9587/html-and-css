@@ -1,0 +1,60 @@
+
+<head>
+    <script src="q-2.js"></script>
+    <script>
+        function add() {
+            let value = document.getElementById("data").value;
+            stack.push(value);
+            document.getElementById("d1").innerText = stack.items.join("->");
+            console.log(stack);
+
+        }
+        function remove() {
+            if(stack.isempty()){
+                document.getElementById("d1").innerText ="stack is empty";
+        }else{
+            stack.pop();
+            document.getElementById("d1").innerText =stack.items.join("->");
+            console.log(stack);
+    }
+}
+    function getlastitem(){
+        if(stack.isempty()){
+            alert("stack is empty")
+        }else{
+            //stack.peek();
+        alert("last item:" +stack.peek());
+        }
+    }
+    function printTable()
+{
+    if (stack.items == 0) {
+        return document.getElementById("d1").innerText="Stack is empty";
+    } else{
+    var ndata= stack.items;//.getElementById("data").innerText=Stack.items;
+    var spaceofDiv=document.getElementById("d1");
+    var tableStr = "";
+    tableStr =("<table border=1>");
+    
+        for(i=0; i<ndata.length; i++)
+        {    
+            tableStr +="<tr><td width=50 height=50>"+ndata[i]+"</td></tr>&nbsp;";
+        }
+    tableStr  += "</table>"
+    spaceofDiv.innerHTML=tableStr;  
+    } 
+    
+}
+    </script>
+</head>
+<body>
+    <h2>stack  demo using javascript</h2>
+    Enter Data : <input type="text" id="data">
+    <button onclick="add()">add</button>
+    <button onclick="remove()">remove</button>
+    <button onclick="getlastitem()">peek</button>
+    <button onclick="printTable()">printtable</button>
+    <div id="d1"></div>
+</body>
+
+</html>

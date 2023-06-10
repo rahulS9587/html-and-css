@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="day2.4.js"></script>
+    <script>
+        function searchitem() {
+            let arr = [5, 7, 9, 8, 12, 20, 1,100];
+            let item = document.getElementById("textitem").value;
+            if (binarysearch(arr, item)) {//linear
+                alert("item found");
+            } else {
+                alert("item not found");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>linear and search using javascript</h2>
+    Eter number of search:<input type="text" id="textitem" />
+    <button onclick="searchitem()">search item</button>
+</body>
+
+</html>

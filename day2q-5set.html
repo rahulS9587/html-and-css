@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <script src="set.js"></script>
+    <script>
+        var s1 = new Set([10, 20, 30, 40]);
+        var s2 = new Set([40, 50, 60, 20]);
+        //console.log(s1)
+        function setunion() {
+            var s3 = union();
+            console.log("union:", s3);
+        }
+        function setintersection() {
+            var s3 = intersection();
+            console.log("intersection", s3);
+        }
+        function setdifference() {
+            var s3 = difference();
+            console.log("difference", s3);
+        }
+    </script>
+
+</head>
+<body>
+    <h1>set operations using javascript</h1>
+    <button onclick="setunion()"> union</button>
+    <button onclick="setintersection()">intersection</button>
+    <button onclick="setdifference()"> difference</button>
+
+</body>
+
+</html>
